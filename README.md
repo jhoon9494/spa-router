@@ -56,7 +56,7 @@ export const Router = ({ children }: { children: ReactElement[] }) => {
     };
   }, []);
 
-  const renderChild = children.find((c) => c.props.path === window.location.pathname);
+  const renderChild = children.find((c) => c.props.path === path);
 
   if (!renderChild) return <NotFound />;
 
