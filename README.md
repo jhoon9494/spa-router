@@ -52,7 +52,7 @@ export const Router = ({ children }: { children: ReactElement[] }) => {
   useEffect(() => {
     window.addEventListener('popstate', handlePopstate);
     return () => {
-      handlePopstate();
+      window.removeEventListener('popstate', handlePopstate);
     };
   }, []);
 
