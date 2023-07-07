@@ -7,8 +7,8 @@ const About = () => {
   };
 
   return (
-    <div>
-      <div>About 컴포넌트입니다.</div>
+    <div className="container">
+      <h2>About</h2>
       <button onClick={() => handleClick('/')}>go Root</button>
     </div>
   );

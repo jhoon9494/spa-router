@@ -7,8 +7,8 @@ const Root = () => {
   };
 
   return (
-    <div>
-      <div>Root 컴포넌트입니다</div>
+    <div className="container">
+      <h2>Root</h2>
       <button onClick={() => handleClick('/about')}>go About</button>
     </div>
   );
