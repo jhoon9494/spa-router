@@ -64,11 +64,13 @@ export const Router = ({ children }: { children: ReactElement[] }) => {
 };
 ```
 
-- `useRouter` hook의 push 함수를 사용하여 변경시킨 path를 Router 컴포넌트에서 감지하고, 변경된 path에 맞는 컴포넌트를 렌더링시켜야 했다.
+- useRouter hook의 push 함수를 사용하여 `변경시킨 path`를 Router 컴포넌트에서 감지하고, 변경된 path에 맞는 컴포넌트를 렌더링시켜야 했다.
 
 - root, about 등 여러 페이지에서 useRouter hook을 사용하더라도, 동일한 state(path)를 바라보고 있어야하므로 `context API`를 사용하여 구현했다.
 
-- `popstate` 이벤트를 등록하여 뒤로가기, 앞으로가기 등 페이지 전환 이벤트를 감지
+- `popstate` 이벤트를 등록하여 뒤로가기, 앞으로가기 등 페이지 전환 이벤트를 감지하고, 이벤트가 실행됐을 때의 pathname으로 state를 변경시켜 Router 컴포넌트를 리렌더링 시키도록했다.
+
+- 리렌더링되었을 때 state(path)에 해당하는 path를 가진 Route 컴포넌트의 element를 렌더링시킨다.
 
 <br />
 
